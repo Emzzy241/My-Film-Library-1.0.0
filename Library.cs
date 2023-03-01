@@ -21,6 +21,12 @@ class Library{
         Console.WriteLine("WELCOME aboard to MY FILM LIBRARY 1.0.1");
         Console.WriteLine("This is an App whose aim is to give you the best when it comes to of Film Libraries");
         Console.WriteLine();
+        Console.WriteLine();
+
+        // Currently as at today: 1st of March 2023, my C# learning hasn't gotten me yet to databases But I would try as 
+        // much as possible to replicate one(mock one based on my understanding)
+
+        COnsole.WriteLine("What would you Like to do today")
 
 
     }
