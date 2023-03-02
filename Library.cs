@@ -19,6 +19,11 @@ using System.Linq;
 // Don't forget I am using the class System.Collections.Generic namespace because I want my Console App to be able to access Dictionaries in it
 // a new one is the System.Linq() namespace so  can be able to access my .ElementAt() method and this ElementAt() method makes me able
 // to display element at any particular index
+
+// ElementAt() is a System.Linq method in C# that is used to get and display element at a particular index
+// The ElementAt operator is used to return an element from the particular index from the given collection or sequence 
+// and here our ElementAt() method is used for our Dictionary Collection
+
 class Library
 {
     static void Main()
@@ -175,13 +180,14 @@ class Library
 
                                         switch (intDeleteData)
                                         {
+                                            // First ever case for the integer 2
                                             case 1:
                                                 seeHarryDictionary.Remove(1);
                                                 Console.WriteLine("The first Data you inputted has been deleted");
                                                 Console.WriteLine("Here is now the remaining Data");
 
-
-                                                // looping through the Dictionary after an Key-value Pair has been removed(a forloop was used)
+                                                
+                                                // looping through the Dictionary after a  Key-value Pair has been removed(a forloop was used)
                                                 for (int index = 0; index < seeHarryDictionary.Count; index++)
                                                 {
                                                     KeyValuePair<int, string> eachRemainingData = seeHarryDictionary.ElementAt(index);
@@ -199,8 +205,6 @@ class Library
                                                         Console.WriteLine("The second Data you inputted has been deleted");
                                                         Console.WriteLine("Here is the remaining Data");
 
-
-                                                        // looping through the Dictionary after an Key-value Pair has been removed(a forloop was used)
                                                         for (int index = 0; index < seeHarryDictionary.Count; index++)
                                                         {
                                                             KeyValuePair<int, string> eachRemainingData = seeHarryDictionary.ElementAt(index);
@@ -320,7 +324,8 @@ class Library
 
                                                                 break;
 
-                                                            
+
+
                                                             // if user deletes the case 4 first
                                                             case 4:
                                                                 seeHarryDictionary.Remove(4);
@@ -355,10 +360,10 @@ class Library
                                                                         switch (userDeleteNewFifthDataInt)
                                                                         {
                                                                             case 5:
-                                                                                seeHarryDictionary.Remove();
+                                                                                seeHarryDictionary.Remove(5);
                                                                                 Console.WriteLine("The Fifth Data you inputted has been deleted");
                                                                                 Console.WriteLine("Here is the remaining Data");
-                                                                                
+
                                                                                 Console.WriteLine("Each Data has been Deleted..... Moving to the Main Menu Now.......");
                                                                                 Console.WriteLine();
                                                                                 Console.WriteLine();
@@ -390,14 +395,15 @@ class Library
 
                                                                         Console.WriteLine("There is only one Data left which is the 3rd data to delete that input '5' to delete it or input '0' to go back to App's Man Menu");
 
-                                                                        string userDeleteNewThirdData = Console.ReadLine();
-                                                                        int userDeleteNewThirdDataInt = int.Parse(userDeleteNewThirdData);
-                                                                        switch (userDeleteNewThirdDataInt)
+                                                                        string userDeletingNewThirdData = Console.ReadLine();
+                                                                        int userDeletingNewThirdDataInt = int.Parse(userDeletingNewThirdData);
+                                                                        switch (userDeletingNewThirdDataInt)
                                                                         {
                                                                             case 3:
+                                                                                seeHarryDictionary.Remove(3);
                                                                                 Console.WriteLine("The Third Data you inputted has been deleted");
                                                                                 Console.WriteLine("Here is the remaining Data");
-                                                                                
+
                                                                                 Console.WriteLine("Each Data has been Deleted..... Moving to the Main Menu Now.......");
                                                                                 Console.WriteLine();
                                                                                 Console.WriteLine();
@@ -428,7 +434,7 @@ class Library
                                                                 break;
 
                                                             // if user deletes the case 5 first
-                                                              case 5:
+                                                            case 5:
                                                                 seeHarryDictionary.Remove(5);
                                                                 Console.WriteLine("The fifth Data you inputted has been deleted");
                                                                 Console.WriteLine("Here is the remaining Data");
@@ -464,7 +470,7 @@ class Library
                                                                                 seeHarryDictionary.Remove(4);
                                                                                 Console.WriteLine("The Fifth Data you inputted has been deleted");
                                                                                 Console.WriteLine("Here is the remaining Data");
-                                                                                
+
                                                                                 Console.WriteLine("Each Data has been Deleted..... Moving to the Main Menu Now.......");
                                                                                 Console.WriteLine();
                                                                                 Console.WriteLine();
@@ -504,7 +510,7 @@ class Library
                                                                                 seeHarryDictionary.Remove(3);
                                                                                 Console.WriteLine("The Third Data you inputted has been deleted");
                                                                                 Console.WriteLine("Here is the remaining Data");
-                                                                                
+
                                                                                 Console.WriteLine("Each Data has been Deleted..... Moving to the Main Menu Now.......");
                                                                                 Console.WriteLine();
                                                                                 Console.WriteLine();
@@ -532,7 +538,7 @@ class Library
 
 
                                                                 break;
-                                                            
+
 
 
                                                             default:
@@ -550,8 +556,6 @@ class Library
                                                         Console.WriteLine("The third Data you inputted has been deleted");
                                                         Console.WriteLine("Here is the remaining Data");
 
-
-                                                        // looping through the Dictionary after an Key-value Pair has been removed(a forloop was used)
                                                         for (int index = 0; index < seeHarryDictionary.Count; index++)
                                                         {
                                                             KeyValuePair<int, string> eachRemainingData = seeHarryDictionary.ElementAt(index);
@@ -564,8 +568,6 @@ class Library
                                                         Console.WriteLine("The fourth Data you inputted has been deleted");
                                                         Console.WriteLine("Here is the remaining Data");
 
-
-                                                        // looping through the Dictionary after an Key-value Pair has been removed(a forloop was used)
                                                         for (int index = 0; index < seeHarryDictionary.Count; index++)
                                                         {
                                                             KeyValuePair<int, string> eachRemainingData = seeHarryDictionary.ElementAt(index);
@@ -580,7 +582,7 @@ class Library
                                                         Console.WriteLine("Here is the remaining Data");
 
 
-                                                        // looping through the Dictionary after an Key-value Pair has been removed(a forloop was used)
+
                                                         for (int index = 0; index < seeHarryDictionary.Count; index++)
                                                         {
                                                             KeyValuePair<int, string> eachRemainingData = seeHarryDictionary.ElementAt(index);
@@ -600,45 +602,22 @@ class Library
                                                         break;
                                                 }
 
-                                                // Now I want to run a loop that will determine which new Data me user wants to delete
 
 
-
-                                                // ElementAt() is a System.Linq method in C# that is used to get and display element at a particular index
-                                                // The ElementAt operator is used to return an element from the particular index from the given collection or sequence 
-                                                // and here our ElementAt() method is used for our Dictionary Collection
-
-
-                                                for (int index = 0; index < seeHarryDictionary.Count; index++)
-                                                {
-                                                    KeyValuePair<int, string> eachRemainingData = seeHarryDictionary.ElementAt(index);
-                                                    Console.WriteLine($"{eachRemainingData.Key} has the Data: {eachRemainingData.Value}");
-
-                                                }
-
-                                                // Dictionary<string, int> newDict = new Dictionary<string, int>(){{"string", 3}, {"ahmed", 30}};
-
-                                                // for (int index = 0; index < newDict.Count; index++)
-                                                // {
-                                                //     KeyValuePair<string, int> entry = newDict.ElementAt(index);
-                                                //     Console.WriteLine($"{entry.Value} {entry.Key} values ");
-                                                // };
-
-
-
-                                                // string userDeletesMoreData = Console.ReadLine();
-                                                // int userDeletesMoreDataInt = int.Parse(userDeletesMoreData);
-                                                // // a switch-case for the remaining data
-                                                // switch (userDeletesMoreDataInt)
-                                                // {
-
-                                                //     default:
-                                                //         Console.WriteLine("that data does not exist in your Film Library");
-                                                //         Main();
-                                                //         break;
-                                                // }
 
                                                 break;
+
+
+
+
+
+
+
+
+
+
+
+                                            // First ever case for the integer 2
                                             case 2:
                                                 seeHarryDictionary.Remove(2);
                                                 Console.WriteLine("The second Data you inputted has been deleted");
@@ -654,6 +633,9 @@ class Library
 
                                                 }
                                                 break;
+
+
+                                            // First ever case for the integer 3
                                             case 3:
                                                 seeHarryDictionary.Remove(3);
                                                 Console.WriteLine("The third Data you inputted has been deleted");
@@ -668,6 +650,9 @@ class Library
 
                                                 }
                                                 break;
+
+
+                                            // First ever case for the integer 4
                                             case 4:
                                                 seeHarryDictionary.Remove(4);
                                                 Console.WriteLine("The fourth Data you inputted has been deleted");
@@ -681,6 +666,9 @@ class Library
 
                                                 }
                                                 break;
+
+
+                                            // First ever case for the integer 5
                                             case 5:
                                                 seeHarryDictionary.Remove(5);
                                                 Console.WriteLine("The fifth Data you inputted has been deleted");
