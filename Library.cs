@@ -107,7 +107,7 @@ class Library
 
                                 Console.WriteLine("Thank you very Much on all Data provided");
 
-                                Console.WriteLine("Would you like to see each of the Data you enterred? [Enter 'Y' for yes and 'N' for No]");
+                                Console.WriteLine("Would you like to see each of the Data you enterred or delete any Data enterred? [Enter 'Y' to see data and 'N' to go to Main Menu and 'D' to delete any data you supplied to movie]");
 
                                 string seeData = Console.ReadLine().ToUpper();
 
@@ -125,20 +125,20 @@ class Library
                                             Console.WriteLine($"The data {data.Key} you added to the Harry Potter Movie was: '{data.Value}'");
 
                                         }
-                                        Console.WriteLine("Enter What you would love to do next. [Enter 'K' to go back to the Main Menu or 'X' to exit the APplication]");
-                                            string whatToDo = Console.ReadLine();
+                                        Console.WriteLine("Enter What you would love to do next. [Enter 'K' to go back to the Main Menu or 'X' to exit the Application]");
+                                        string whatToDo = Console.ReadLine();
 
-                                            // another switch-case statement to determine what User wants to do next
-                                            switch (whatToDo)
-                                            {
-                                                case "K":
-                                                    Main();
-                                                    break;
-                                                case "X":
-                                                    Console.WriteLine("Goodbye My Dear User");
-                                                break; 
-                                                
-                                            }
+                                        // another switch-case statement to determine what User wants to do next
+                                        switch (whatToDo)
+                                        {
+                                            case "K":
+                                                Main();
+                                                break;
+                                            case "X":
+                                                Console.WriteLine("Goodbye My Dear User");
+                                                break;
+
+                                        }
                                         break;
 
                                     case "N":
@@ -150,12 +150,66 @@ class Library
                                         Console.WriteLine();
                                         Main();
                                         break;
+
+                                    case "D":
+                                        Console.WriteLine("Here is all the Data you inputted into the App");
+                                        
+                                        Dictionary<int, string> seeHarryDictionary = new Dictionary<int, string>() { { 1, addHarryData }, { 2, addHarryData2 }, { 3, addHarryData3 }, { 4, addHarryData4 }, { 5, addHarryData5 } };
+
+
+                                        foreach (KeyValuePair<int, string> data in seeHarryDictionary)
+                                        {
+                                            // using the KeyValuePair<TKey, TValue>nclass that will represent each key-value pair within our dictionary
+                                            Console.WriteLine($"The data {data.Key} you added to the Harry Potter Movie was: '{data.Value}'");
+
+                                        }
+
+                                        Console.WriteLine("What data would you Like to Delete");
+                                        Console.WriteLine("Enter '1' to delete first data and '2', '3', '4', or '5' to delete the 2nd, 3rd, 4th, or 5th data");
+                                        string deleteData = Console.ReadLine();
+                                        // converting the string Console.ReadLine() gives me into an integer
+                                        int intDeleteData = int.Parse(deleteData);
+
+                                        switch (intDeleteData)
+                                        {
+                                            case 1:
+                                                seeHarryDictionary.Remove(1);
+                                                Console.WriteLine("The first Data you inputted has been deleted");
+                                            break;
+                                            case 2:
+                                                seeHarryDictionary.Remove(2);
+                                                Console.WriteLine("The second Data you inputted has been deleted");
+                                            break;
+                                            case 3:
+                                                seeHarryDictionary.Remove(3);
+                                                Console.WriteLine("The third Data you inputted has been deleted");
+                                            break;
+                                            case 4:
+                                                seeHarryDictionary.Remove(4);
+                                                Console.WriteLine("The fourth Data you inputted has been deleted");
+                                            break;
+                                            case 5:
+                                                seeHarryDictionary.Remove(5);
+                                                Console.WriteLine("The fifth Data you inputted has been deleted");
+                                            break;
+
+                                            default:
+                                            break;
+                                        }
+
+                                        break;
                                 }
 
 
 
                                 break;
+
+                            case "R":
+                                break;
+
+
                             default:
+                                Main();
                                 break;
                         }
                         break;
@@ -177,6 +231,7 @@ class Library
 
 
                     default:
+                        Main();
                         break;
                 }
 
@@ -186,6 +241,7 @@ class Library
                 Console.WriteLine("Goodbye My Dear User");
                 break;
             default:
+                Main();
                 break;
         }
 
@@ -203,6 +259,7 @@ class Library
                 break;
 
             default:
+                Main();
                 break;
         }
 
