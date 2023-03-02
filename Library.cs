@@ -13,9 +13,12 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
+
 
 // Don't forget I am using the class System.Collections.Generic namespace because I want my Console App to be able to access Dictionaries in it
-
+// a new one is the System.Linq() namespace so  can be able to access my .ElementAt() method and this ElementAt() method makes me able
+// to display element at any particular index
 class Library
 {
     static void Main()
@@ -153,7 +156,7 @@ class Library
 
                                     case "D":
                                         Console.WriteLine("Here is all the Data you inputted into the App");
-                                        
+
                                         Dictionary<int, string> seeHarryDictionary = new Dictionary<int, string>() { { 1, addHarryData }, { 2, addHarryData2 }, { 3, addHarryData3 }, { 4, addHarryData4 }, { 5, addHarryData5 } };
 
 
@@ -175,26 +178,116 @@ class Library
                                             case 1:
                                                 seeHarryDictionary.Remove(1);
                                                 Console.WriteLine("The first Data you inputted has been deleted");
-                                            break;
+                                                Console.WriteLine("Here is now the remaining Data");
+
+
+                                                // looping through the Dictionary after an Key-value Pair has been removed
+                                                for (int index = 0; index < seeHarryDictionary.Count; index++)
+                                                {
+                                                    KeyValuePair<int, string> eachRemainingData = seeHarryDictionary.ElementAt(index);
+                                                    Console.WriteLine($"The data {eachRemainingData.Key} you added to the Harry Potter Movie was: {eachRemainingData.Value}");
+
+                                                }
+                                                Console.WriteLine("The remaining data's are 2,3,4,5. Enter Enter Enter '2', '3', '4', '5' to delete the 2nd,3rd,4th, or 5th data");
+                                                string userDeletesMoreData = Console.ReadLine();
+                                                int userDeletesMoreDataInt = int.Parse(userDeletesMoreData);
+
+                                                // Now I want to run a loop that will determine which new Data me user wants to delete
+
+
+
+                                                // ElementAt() is a System.Linq method in C# that is used to get and display element at a particular index
+                                                // The ElementAt operator is used to return an element from the particular index from the given collection or sequence 
+                                                // and here our ElementAt() method is used for our Dictionary Collection
+
+
+                                                for (int index = 0; index < seeHarryDictionary.Count; index++)
+                                                {
+                                                    KeyValuePair<int, string> eachRemainingData = seeHarryDictionary.ElementAt(index);
+                                                    Console.WriteLine($"{eachRemainingData.Key} has the Data: {eachRemainingData.Value}");
+
+                                                }
+
+                                                // Dictionary<string, int> newDict = new Dictionary<string, int>(){{"string", 3}, {"ahmed", 30}};
+
+                                                // for (int index = 0; index < newDict.Count; index++)
+                                                // {
+                                                //     KeyValuePair<string, int> entry = newDict.ElementAt(index);
+                                                //     Console.WriteLine($"{entry.Value} {entry.Key} values ");
+                                                // };
+
+
+
+                                                // string userDeletesMoreData = Console.ReadLine();
+                                                // int userDeletesMoreDataInt = int.Parse(userDeletesMoreData);
+                                                // // a switch-case for the remaining data
+                                                // switch (userDeletesMoreDataInt)
+                                                // {
+
+                                                //     default:
+                                                //         Console.WriteLine("that data does not exist in your Film Library");
+                                                //         Main();
+                                                //         break;
+                                                // }
+
+                                                break;
                                             case 2:
                                                 seeHarryDictionary.Remove(2);
                                                 Console.WriteLine("The second Data you inputted has been deleted");
-                                            break;
+                                                Console.WriteLine("Here is now the remaining Data");
+
+
+
+                                                // looping through the Dictionary after an Key-value Pair has been removed
+                                                foreach (KeyValuePair<int, string> data in seeHarryDictionary)
+                                                {
+                                                    // using the KeyValuePair<TKey, TValue>nclass that will represent each key-value pair within our dictionary
+                                                    Console.WriteLine($"The data {data.Key} you added to the Harry Potter Movie was: '{data.Value}'");
+
+                                                }
+                                                break;
                                             case 3:
                                                 seeHarryDictionary.Remove(3);
                                                 Console.WriteLine("The third Data you inputted has been deleted");
-                                            break;
+                                                Console.WriteLine("Here is now the remaining Data");
+
+                                                // looping through the Dictionary after an Key-value Pair has been removed
+
+                                                foreach (KeyValuePair<int, string> data in seeHarryDictionary)
+                                                {
+                                                    // using the KeyValuePair<TKey, TValue>nclass that will represent each key-value pair within our dictionary
+                                                    Console.WriteLine($"The data {data.Key} you added to the Harry Potter Movie was: '{data.Value}'");
+
+                                                }
+                                                break;
                                             case 4:
                                                 seeHarryDictionary.Remove(4);
                                                 Console.WriteLine("The fourth Data you inputted has been deleted");
-                                            break;
+                                                Console.WriteLine("Here is now the remaining Data");
+
+
+                                                foreach (KeyValuePair<int, string> data in seeHarryDictionary)
+                                                {
+                                                    // using the KeyValuePair<TKey, TValue>nclass that will represent each key-value pair within our dictionary
+                                                    Console.WriteLine($"The data {data.Key} you added to the Harry Potter Movie was: '{data.Value}'");
+
+                                                }
+                                                break;
                                             case 5:
                                                 seeHarryDictionary.Remove(5);
                                                 Console.WriteLine("The fifth Data you inputted has been deleted");
-                                            break;
+                                                Console.WriteLine("Here is now the remaining Data");
+
+                                                foreach (KeyValuePair<int, string> data in seeHarryDictionary)
+                                                {
+                                                    // using the KeyValuePair<TKey, TValue>nclass that will represent each key-value pair within our dictionary
+                                                    Console.WriteLine($"The data {data.Key} you added to the Harry Potter Movie was: '{data.Value}'");
+
+                                                }
+                                                break;
 
                                             default:
-                                            break;
+                                                break;
                                         }
 
                                         break;
