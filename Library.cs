@@ -67,22 +67,96 @@ class Library
                         Console.WriteLine();
                         Console.WriteLine();
 
-                        Console.WriteLine("Enter 'a'to add Data on the Harry Potter movie");
+                        Console.WriteLine("Enter 'A'to add Data on the Harry Potter movie");
                         Console.WriteLine("Enter 'R'to Retrieve Data on the Harry Potter movie");
                         Console.WriteLine("Enter 'C'to comment potential fixes to the Harry Potter movie");
                         Console.WriteLine("Enter 'Boo'to rate the Harry Potter movie down");
                         Console.WriteLine("Enter 'Woo'to rate the Harry Potter movie up");
-                        string harry = Console.ReadLine();
+                        string harry = Console.ReadLine().ToUpper();
 
                         switch (harry)
                         {
-                            case "D":
-                                Console.WriteLine("Please enter the data you want to add to the movie: harrry potter")
+                            case "A":
+                                // data1
+                                Console.WriteLine("Enter the data you want to add to the movie: harrry potter");
+                                Console.WriteLine();
+                                Console.WriteLine("Note: You are expected to add up to 5 data's on the selected Movie");
 
-                                
+                                Console.WriteLine();
+                                // Console.WriteLine();
+                                // data2
+                                string addHarryData = Console.ReadLine();
 
-                                Dictionary<string, string> harryDictionary = new DIDictionary<string, string>(){{}}
+                                Console.WriteLine("Dear User, add in the second data on the Harry Potter Movie");
+
+                                string addHarryData2 = Console.ReadLine();
+                                // data3
+
+                                Console.WriteLine("Dear User, add in the third data on the Harry Potter Movie");
+
+                                string addHarryData3 = Console.ReadLine();
+
+                                Console.WriteLine("add in the fourth data on the Harry Potter Movie");
+
+                                string addHarryData4 = Console.ReadLine();
+
+
+                                Console.WriteLine("add in the fifth data on the Harry Potter Movie");
+
+                                string addHarryData5 = Console.ReadLine();
+
+                                Console.WriteLine("Thank you very Much on all Data provided");
+
+                                Console.WriteLine("Would you like to see each of the Data you enterred? [Enter 'Y' for yes and 'N' for No]");
+
+                                string seeData = Console.ReadLine().ToUpper();
+
+                                switch (seeData)
+                                {
+                                    case "Y":
+                                        Console.WriteLine("Here is all the Data you Inputted");
+
+                                        Dictionary<int, string> harryDictionary = new Dictionary<int, string>() { { 1, addHarryData }, { 2, addHarryData2 }, { 3, addHarryData3 }, { 4, addHarryData4 }, { 5, addHarryData5 } };
+
+
+                                        foreach (KeyValuePair<int, string> data in harryDictionary)
+                                        {
+                                            // using the KeyValuePair<TKey, TValue>nclass that will represent each key-value pair within our dictionary
+                                            Console.WriteLine($"The data {data.Key} you added to the Harry Potter Movie was: '{data.Value}'");
+
+                                        }
+                                        Console.WriteLine("Enter What you would love to do next. [Enter 'K' to go back to the Main Menu or 'X' to exit the APplication]");
+                                            string whatToDo = Console.ReadLine();
+
+                                            // another switch-case statement to determine what User wants to do next
+                                            switch (whatToDo)
+                                            {
+                                                case "K":
+                                                    Main();
+                                                    break;
+                                                case "X":
+                                                    Console.WriteLine("Goodbye My Dear User");
+                                                break; 
+                                                
+                                            }
+                                        break;
+
+                                    case "N":
+                                        Console.WriteLine();
+                                        Console.WriteLine();
+                                        Console.WriteLine("Let's Get Back to the Main Menu of the App");
+                                        Console.WriteLine();
+                                        Console.WriteLine();
+                                        Console.WriteLine();
+                                        Main();
+                                        break;
+                                }
+
+
+
+                                break;
                             default:
+                                break;
                         }
                         break;
 
@@ -90,13 +164,15 @@ class Library
                         Console.WriteLine("You have selected Money Heist, what would you like to do to this Movie today?");
                         Console.WriteLine("Enter 'D'to add Data on the Money Heist movie");
                         Console.WriteLine();
-                        Console.WriteLine();
-                        Console.WriteLine();
 
-                        Console.WriteLine("Enter 'R'to Retrieve Data on the Money Heist movie");
-                        Console.WriteLine("Enter 'C'to comment potential fixes to the Money Heist movie");
-                        Console.WriteLine("Enter 'Boo'to rate the Money Heist movie down");
-                        Console.WriteLine("Enter 'Woo'to rate the Money Heist movie up");
+                        Console.WriteLine("Enter 'R' to Retrieve Data on the Money Heist movie");
+                        Console.WriteLine();
+                        Console.WriteLine("Enter 'C' to comment potential fixes to the Money Heist movie");
+                        Console.WriteLine();
+                        Console.WriteLine("Enter 'Boo' to rate the Money Heist movie down");
+                        Console.WriteLine();
+                        Console.WriteLine("Enter 'Woo' to rate the Money Heist movie up");
+                        Console.WriteLine();
                         break;
 
 
