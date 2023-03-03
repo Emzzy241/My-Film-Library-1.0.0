@@ -1310,7 +1310,7 @@ class Library
                                                                             Console.WriteLine($"The data {eachRemainingData.Key} you added to the Harry Potter Movie was: {eachRemainingData.Value}");
                                                                         }
 
-                                                                        Console.WriteLine("There is only one Data left which is the 5th data to delete that input '5' to delete it or input '0' to go back to App's Man Menu");
+                                                                        Console.WriteLine("There is only one Data left which is the 4th data to delete that input '4' to delete it or input '0' to go back to App's Man Menu");
 
                                                                         string userDeleteFifthData = Console.ReadLine();
                                                                         int userDeleteFifthDataInt = int.Parse(userDeleteFifthData);
@@ -1349,7 +1349,7 @@ class Library
                                                                             Console.WriteLine($"The data {eachRemainingData.Key} you added to the Harry Potter Movie was: {eachRemainingData.Value}");
                                                                         }
 
-                                                                        Console.WriteLine("There is only one Data left which is the 3rd data to delete that input '4' to delete it or input '0' to go back to App's Man Menu");
+                                                                        Console.WriteLine("There is only one Data left which is the 3rd data to delete that input '3' to delete it or input '0' to go back to App's Man Menu");
 
                                                                         string userDeleteLastData = Console.ReadLine();
                                                                         int userDeleteLastDataInt = int.Parse(userDeleteLastData);
@@ -1418,7 +1418,7 @@ class Library
                                                                             Console.WriteLine($"The data {eachRemainingData.Key} you added to the Harry Potter Movie was: {eachRemainingData.Value}");
                                                                         }
 
-                                                                        Console.WriteLine("There is only one Data left which is the 5th data to delete that input '5' to delete it or input '0' to go back to App's Man Menu");
+                                                                        Console.WriteLine("There is only one Data left which is the 4th data to delete that input '4' to delete it or input '0' to go back to App's Man Menu");
 
                                                                         string userDeleteNewFifthData = Console.ReadLine();
                                                                         int userDeleteNewFifthDataInt = int.Parse(userDeleteNewFifthData);
@@ -1447,9 +1447,9 @@ class Library
 
                                                                         break;
 
-                                                                    case 5:
-                                                                        seeHarryDictionary.Remove(5);
-                                                                        Console.WriteLine("The Fifth Data you inputted has been deleted");
+                                                                    case 4:
+                                                                        seeHarryDictionary.Remove(4);
+                                                                        Console.WriteLine("The Fourth Data you inputted has been deleted");
                                                                         Console.WriteLine("Here is the remaining Data");
                                                                         for (int index = 0; index < seeHarryDictionary.Count; index++)
                                                                         {
@@ -1457,7 +1457,7 @@ class Library
                                                                             Console.WriteLine($"The data {eachRemainingData.Key} you added to the Harry Potter Movie was: {eachRemainingData.Value}");
                                                                         }
 
-                                                                        Console.WriteLine("There is only one Data left which is the 3rd data to delete that input '5' to delete it or input '0' to go back to App's Man Menu");
+                                                                        Console.WriteLine("There is only one Data left which is the 4th data to delete that input '4' to delete it or input '0' to go back to App's Man Menu");
 
                                                                         string userDeletingNewThirdData = Console.ReadLine();
                                                                         int userDeletingNewThirdDataInt = int.Parse(userDeletingNewThirdData);
@@ -1496,10 +1496,10 @@ class Library
 
                                                                 break;
 
-                                                            // // if user deletes the case 5 first.. after case3(and case1) has been deleted
-                                                            case 5:
-                                                                seeHarryDictionary.Remove(5);
-                                                                Console.WriteLine("The fifth Data you inputted has been deleted");
+                                                            // // if user deletes the case 4 first.. after case3(and case1) has been deleted
+                                                            case 4:
+                                                                seeHarryDictionary.Remove(4);
+                                                                Console.WriteLine("The fourth Data you inputted has been deleted");
                                                                 Console.WriteLine("Here is the remaining Data");
                                                                 for (int index = 0; index < seeHarryDictionary.Count; index++)
                                                                 {
@@ -1515,7 +1515,7 @@ class Library
                                                                 {
                                                                     case 2:
                                                                         seeHarryDictionary.Remove(2);
-                                                                        Console.WriteLine("The Third Data you inputted has been deleted");
+                                                                        Console.WriteLine("The Fourth Data you inputted has been deleted");
                                                                         Console.WriteLine("Here is the remaining Data");
                                                                         for (int index = 0; index < seeHarryDictionary.Count; index++)
                                                                         {
@@ -1562,7 +1562,7 @@ class Library
                                                                             Console.WriteLine($"The data {eachRemainingData.Key} you added to the Harry Potter Movie was: {eachRemainingData.Value}");
                                                                         }
 
-                                                                        Console.WriteLine("There is only one Data left which is the 3rd data to delete that input '5' to delete it or input '0' to go back to App's Man Menu");
+                                                                        Console.WriteLine("There is only one Data left which is the 2nd data to delete that input '2' to delete it or input '0' to go back to App's Man Menu");
 
                                                                         string userDeleteLastThreeData = Console.ReadLine();
                                                                         int userDeleteLastThreeDataInt = int.Parse(userDeleteLastThreeData);
@@ -1571,7 +1571,6 @@ class Library
                                                                             case 2:
                                                                                 seeHarryDictionary.Remove(2);
                                                                                 Console.WriteLine("The second Data you inputted has been deleted");
-                                                                                Console.WriteLine("Here is the remaining Data");
 
                                                                                 Console.WriteLine("Each Data has been Deleted..... Moving to the Main Menu Now Press Enter.......");
                                                                                 Console.WriteLine();
@@ -1628,15 +1627,8 @@ class Library
                                                 break;
 
 
-
-
-
-
-
-
-
-
-
+                                                // CONTINUE FROM HERE FOR APP UPDATE; 
+                                                // Start from (2-1-3-4-5, 2-1-3-5-4), (2-1-4-3-5, 2-1-4-5-3) e.t.c... Draw the Table of 2's in a book
                                             // First ever case for the integer 2
                                             case 2:
                                                 seeHarryDictionary.Remove(2);
