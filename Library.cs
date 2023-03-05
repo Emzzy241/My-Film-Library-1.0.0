@@ -76,10 +76,10 @@ class Library
                         Console.WriteLine();
 
                         Console.WriteLine("Enter 'A'to add Data on the Harry Potter movie");
-                        Console.WriteLine("Enter 'R'to Retrieve Data on the Harry Potter movie");
-                        Console.WriteLine("Enter 'C'to comment potential fixes to the Harry Potter movie");
-                        Console.WriteLine("Enter 'Boo'to rate the Harry Potter movie down");
-                        Console.WriteLine("Enter 'Woo'to rate the Harry Potter movie up");
+                        // Console.WriteLine("Enter 'R'to Retrieve Data on the Harry Potter movie");
+                        // Console.WriteLine("Enter 'C'to comment potential fixes to the Harry Potter movie");
+                        // Console.WriteLine("Enter 'Boo'to rate the Harry Potter movie down");
+                        // Console.WriteLine("Enter 'Woo'to rate the Harry Potter movie up");
                         string harry = Console.ReadLine().ToUpper();
 
                         switch (harry)
