@@ -152,7 +152,7 @@ class Library
                                     case "N":
                                         Console.WriteLine();
                                         Console.WriteLine();
-                                        Console.WriteLine("Let's Get Back to the Main Menu of the App");
+                                        Console.WriteLine("Let's Get Back to the Main Menu of the App, Press Enter....");
                                         Console.WriteLine();
                                         Console.WriteLine();
                                         Console.WriteLine();
@@ -174,6 +174,7 @@ class Library
 
                                         Console.WriteLine("What data would you Like to Delete");
                                         Console.WriteLine("Enter '1' to delete first data and '2', '3', '4', or '5' to delete the 2nd, 3rd, 4th, or 5th data");
+                                        Console.WriteLine("PLEASE NOTE: You can only delete the data '1' first, then you can delete other data");
                                         string deleteData = Console.ReadLine();
                                         // converting the string Console.ReadLine() gives me into an integer
                                         int intDeleteData = int.Parse(deleteData);
